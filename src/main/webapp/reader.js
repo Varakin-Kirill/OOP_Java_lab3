@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const userList = document.getElementById('userList');
 
-    // Загрузка списка автомобилей при загрузке страницы
+    // Загрузка списка пользователей при загрузке страницы
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://localhost:8080/lab4_war_exploded/user', true);
 
