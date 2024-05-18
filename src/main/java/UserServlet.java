@@ -49,15 +49,15 @@ public class UserServlet extends HttpServlet {
         JSONObject newUserJson = new JSONObject(jsonRequest.toString());
         System.out.println("wrk");
 
-        // Добавление нового автомобиля в список
+        // Добавление нового пользователя в список
         JSONArray usersJsonArray = new JSONArray(readUsersFromFile());
         usersJsonArray.put(newUserJson);
 
         System.out.println("wrk");
-        // Запись обновленного списка автомобилей в файл
+        // Запись обновленного списка пользователей в файл
         writeUsersToFile(usersJsonArray.toString());
 
-        // Отправка обновленного списка автомобилей
+        // Отправка обновленного списка пользователей
         response.getWriter().write(usersJsonArray.toString());
     }
 
